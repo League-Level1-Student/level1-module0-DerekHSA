@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(200, 150);
 
 		showNextImage();
 
@@ -51,21 +51,46 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
-		// 2. Set the size of the window in the initializeGui() method 
-
-		// 4. Ask the user who this person is and store their answer
+int score = 0;
 		String guess = JOptionPane.showInputDialog("who is this?");
-
-		// 5. Check their answer. If they guessed correctly:
-		// -- Tell them they are right and increase the score by 1
-
+if(guess.equalsIgnoreCase("Arnold Schwarzenegger")) {
+	JOptionPane.showMessageDialog(null, "YOU DID IT");
+score++;
+}else {
+	JOptionPane.showMessageDialog(null, "You were wrong.\nThat celebrity was Arnold Schwarzenegger");
+}
+JOptionPane.showMessageDialog(null, "Current Score: "+score);
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+		String guess1 = JOptionPane.showInputDialog("who is this?");
+		if(guess1.equalsIgnoreCase("Leonardo DiCaprio")) {
+			JOptionPane.showMessageDialog(null, "YOU DID IT");
+		score++;
+		}else {
+			JOptionPane.showMessageDialog(null, "You were wrong.\nThat celebrity was Leonardo DiCaprio");
+		}
+		JOptionPane.showMessageDialog(null, "Current Score: "+score);
+		showNextImage();
+		String guess2 = JOptionPane.showInputDialog("who is this?");
+		if(guess2.equalsIgnoreCase("Morgan Freeman")) {
+			JOptionPane.showMessageDialog(null, "YOU DID IT");
+		score++;
+		}else {
+			JOptionPane.showMessageDialog(null, "You were wrong.\nThat celebrity was Morgan Freeman");
+		}
+		JOptionPane.showMessageDialog(null, "Current Score: "+score);
+		showNextImage();
+		String guess3 = JOptionPane.showInputDialog("who is this?");
+		if(guess3.equalsIgnoreCase("Jack Black")) {
+			JOptionPane.showMessageDialog(null, "YOU DID IT");
+		score++;
+		}else {
+			JOptionPane.showMessageDialog(null, "You were wrong.\nThat celebrity was Jack Black");
+		}
+		JOptionPane.showMessageDialog(null, "Final Score: "+score+"/4");
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
